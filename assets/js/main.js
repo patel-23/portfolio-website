@@ -34,7 +34,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 var _CONTENT = [ 
 	"Full Stack Developer", 
 	"Data Analyst", 
-	"Graphic Designer", 
+	"Pilot",
+    "Soccer Referee",
 	"Liverpool F.C. Fan"
 ];
 

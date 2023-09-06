@@ -555,11 +555,11 @@ img {
 }
 
 .skills__js {
-  width: 60%;
+  width: 70%;
 }
 
 .skills__react {
-  width: 70%;
+  width: 60%;
 }
 
 .skills__java {
@@ -571,7 +571,7 @@ img {
 }
 
 .skills__sql {
-  width: 65%;
+  width: 80%;
 }
 
 .skills__python {
@@ -590,6 +590,25 @@ img {
   width: 85%;
 }
 
+.skills__canva {
+  width: 90%;
+}
+
+.skills__data {
+  width: 70%;
+}
+
+.skills__marketing {
+  width: 60%;
+}
+
+.skills__powerbi {
+  width: 85%
+}
+
+.skills__agile {
+  width: 70%
+}
 .skills__close .skills__list {
   height: 0px;
   overflow: hidden;
@@ -689,7 +708,7 @@ img {
   color: var(--first-color);
 }
 
-/*==================== detailS ====================*/
+/*==================== DETAILS ====================*/
 .details__container {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -1077,6 +1096,7 @@ img {
     overflow: initial;
     border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
   }
+  
 }
 
 /* For medium devices */
@@ -1218,7 +1238,7 @@ img {
     translate: -2.5rem;
   }
   .experience__sections {
-    grid-template-columns: .5fr;
+    grid-template-columns: .55fr;
   }
   .details__container {
     grid-template-columns: repeat(3, 218px);
