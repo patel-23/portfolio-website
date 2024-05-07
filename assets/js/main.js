@@ -258,6 +258,8 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: [0.5] });
 observer.observe(document.getElementById('skills'));
 
+
+
 const projects = document.getElementById('projects');
 var observer = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true)

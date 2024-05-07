@@ -547,19 +547,19 @@ img {
 }
 
 .skills__html {
-  width: 80%;
+  width: 90%;
 }
 
 .skills__css {
-  width: 80%;
+  width: 90%;
 }
 
 .skills__js {
-  width: 70%;
+  width: 90%;
 }
 
 .skills__react {
-  width: 60%;
+  width: 80%;
 }
 
 .skills__java {
@@ -567,16 +567,17 @@ img {
 }
 
 .skills__node {
-  width: 55%;
+  width: 75%;
 }
 
-.skills__sql {
+.skills__cpp {
   width: 80%;
 }
 
-.skills__python {
-  width: 85%;
+.skills__mongo {
+  width: 75%;
 }
+
 
 .skills__figma {
   width: 80%;
@@ -598,16 +599,20 @@ img {
   width: 70%;
 }
 
-.skills__marketing {
-  width: 60%;
+.skills__python {
+  width: 85%;
+}
+
+.skills__azure {
+  width: 75%;
 }
 
 .skills__powerbi {
   width: 85%
 }
 
-.skills__agile {
-  width: 70%
+.skills__sql {
+  width: 80%
 }
 .skills__close .skills__list {
   height: 0px;
@@ -762,7 +767,7 @@ img {
   justify-content: center;
   padding: 0 1rem;
   z-index: var(--z-modal);
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   transition: .3s;
 }
