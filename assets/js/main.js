@@ -289,19 +289,22 @@ function sendEmail() {
     var email = document.getElementById("Email").value;
     var subject = document.getElementById("Subject").value;
     var message = document.getElementById("Message").value;
+    
+    if (name && email && subject && message) {
 
-    var body = "Form Submission from Portfolio: " + "<br/><br/>" + 
-    "Name: " + name + "<br/>" + "Reply To: " + email + "<br/><br/>" + "Message: " + message;
-
-    Email.send({
-        SecureToken: "a9f659cd-0392-4809-9b06-95acd6d1b6ac",
-        To: 'sp29pate@uwaterloo.ca',
-        From: 'sp29pate@uwaterloo.ca',
-        Subject: subject,
-        Body: body
-    })
-        .then(function (message) {
-            alert("Mail has been sent successfully")
-            document.getElementById("contact-form").reset();
-        });
+        var body = "Form Submission from Portfolio: " + "<br/><br/>" + 
+        "Name: " + name + "<br/>" + "Reply To: " + email + "<br/><br/>" + "Message: " + message;
+    
+        Email.send({
+            SecureToken: "a9f659cd-0392-4809-9b06-95acd6d1b6ac",
+            To: 'sp29pate@uwaterloo.ca',
+            From: 'sp29pate@uwaterloo.ca',
+            Subject: subject,
+            Body: body
+        })
+            .then(function (message) {
+                alert("Mail has been sent successfully")
+                document.getElementById("contact-form").reset();
+            });
+    }
 }
