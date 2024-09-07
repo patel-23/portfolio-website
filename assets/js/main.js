@@ -302,5 +302,6 @@ function sendEmail() {
     })
         .then(function (message) {
             alert("Mail has been sent successfully")
+            document.getElementById("contact-form").reset();
         });
 }
