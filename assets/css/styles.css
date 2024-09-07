@@ -73,7 +73,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-  --tw-color: hsl(99, 9%, 61%);
+  --tw-color: hsl(0, 7.4%, 62.7%);
   --shawdow-color: rgba(255, 255, 255, 0.644);
 }
 
@@ -312,6 +312,7 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
+  color: var(--title-color);
 }
 
 .home__subtitle {
@@ -444,7 +445,7 @@ img {
 
 /*==================== ABOUT ====================*/
 .about__img {
-  width: 500px;
+  width: 900px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
@@ -550,15 +551,15 @@ img {
   width: 90%;
 }
 
-.skills__css {
-  width: 90%;
+.skills__react {
+  width: 80%;
+}
+
+.skills__angular {
+  width: 70%;
 }
 
 .skills__js {
-  width: 90%;
-}
-
-.skills__react {
   width: 80%;
 }
 
@@ -566,37 +567,16 @@ img {
   width: 90%;
 }
 
+.skills__cpp {
+  width: 85%;
+}
+
 .skills__node {
   width: 75%;
 }
 
-.skills__cpp {
-  width: 80%;
-}
-
 .skills__mongo {
   width: 75%;
-}
-
-
-.skills__figma {
-  width: 80%;
-}
-
-.skills__photoshop {
-  width: 75%;
-}
-
-.skills__illustrator {
-  width: 85%;
-}
-
-.skills__canva {
-  width: 90%;
-}
-
-.skills__data {
-  width: 70%;
 }
 
 .skills__python {
@@ -613,6 +593,22 @@ img {
 
 .skills__sql {
   width: 80%
+}
+
+.skills__git{
+  width: 85%;
+}
+
+.skills__bash {
+  width: 80%;
+}
+
+.skills__postman {
+  width: 75%;
+}
+
+.skills__vscode {
+  width: 90%;
 }
 .skills__close .skills__list {
   height: 0px;
@@ -1215,10 +1211,11 @@ img {
   }
   
   .about__container {
+    max-width: 900px;
     column-gap: 5rem;
   }
   .about__img {
-    width: 500px;
+    width: 900px;
   }
   .about__description {
     text-align: center;
