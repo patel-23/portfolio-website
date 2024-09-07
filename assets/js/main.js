@@ -281,3 +281,26 @@ gsap.from('.animate-home', {
     y: -300,
     stagger: 0.5
 });
+
+
+/*==================== EMAIL FUNCTION ====================*/
+function sendEmail() {
+    var name = document.getElementById("Name").value;
+    var email = document.getElementById("Email").value;
+    var subject = document.getElementById("Subject").value;
+    var message = document.getElementById("Message").value;
+
+    var body = "Form Submission from Portfolio: " + "<br/><br/>" + 
+    "Name: " + name + "<br/>" + "Reply To: " + email + "<br/><br/>" + "Message: " + message;
+
+    Email.send({
+        SecureToken: "a9f659cd-0392-4809-9b06-95acd6d1b6ac",
+        To: 'sp29pate@uwaterloo.ca',
+        From: 'sp29pate@uwaterloo.ca',
+        Subject: subject,
+        Body: body
+    })
+        .then(function (message) {
+            alert("Mail has been sent successfully")
+        });
+}
