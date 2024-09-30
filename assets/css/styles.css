@@ -575,7 +575,7 @@ img {
   width: 75%;
 }
 
-.skills__mongo {
+.skills__websockets {
   width: 75%;
 }
 
@@ -603,11 +603,11 @@ img {
   width: 80%;
 }
 
-.skills__postman {
+.skills__docker {
   width: 75%;
 }
 
-.skills__vscode {
+.skills__api {
   width: 90%;
 }
 .skills__close .skills__list {
@@ -1224,7 +1224,7 @@ img {
     justify-content: space-between;
   }
   .about__buttons {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .experience__tabs {
     justify-content: center;
