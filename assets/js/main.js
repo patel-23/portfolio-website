@@ -36,7 +36,7 @@ var _CONTENT = [
 	"Data Engineer", 
 	"Student Pilot",
     "Soccer Referee",
-	"Liverpool F.C. Fan"
+	"McLaren F1 Fan"
 ];
 
 // Current sentence being processed

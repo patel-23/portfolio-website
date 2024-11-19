@@ -81,10 +81,10 @@ body.dark-theme {
 .nav__btns {
   display: flex;
   align-items: center;
+  margin-left: 1.5em;
 }
 
 .change-theme {
-  font-size: 1.25rem;
   color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
@@ -376,6 +376,12 @@ img {
 }
 
 .button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
+
+.about__button__icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
   transition: .3s;
@@ -825,10 +831,7 @@ img {
   transition: .3s;
   overflow: hidden;
 }
-.project__container:hover{
-  transition: 0.75s;
-  box-shadow: 0px 0px 10px ;
-}
+
 
 .project__img {
   width: 265px;
@@ -1117,6 +1120,12 @@ img {
     display: grid;
     row-gap: 2rem;
   }
+
+  .about__button__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+  }
   .about__container,
   .skills__container,
   .contact__container {
@@ -1145,6 +1154,8 @@ img {
   .vector {
     min-width: 200px;
   }
+
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -1224,8 +1235,16 @@ img {
     justify-content: space-between;
   }
   .about__buttons {
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 500px;
   }
+
+  .about__button__icon {
+    font-size: 1.25rem;
+    margin-left: -4em;
+    transition: .3s;
+  }
+  
   .experience__tabs {
     justify-content: center;
   }
@@ -1290,6 +1309,12 @@ img {
   .home__social {
     display: grid;
     row-gap: 2rem;
+  }
+
+  .about__button__icon {
+    font-size: 1.25rem;
+    margin-left: -4em;
+    transition: .3s;
   }
 
   .details__container {
