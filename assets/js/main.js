@@ -33,7 +33,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== TYPEWRITER EFFECT ====================*/
 var _CONTENT = [ 
 	"Software Developer", 
-	"Data Engineer", 
+	"Data Analyst", 
 	"Student Pilot",
     "Soccer Referee",
 	"McLaren F1 Fan"
