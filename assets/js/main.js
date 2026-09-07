@@ -289,24 +289,16 @@ function sendEmail() {
     var email = document.getElementById("Email").value;
     var subject = document.getElementById("Subject").value;
     var message = document.getElementById("Message").value;
-    
+
     if (name && email && subject && message) {
 
-        var body = "Form Submission from Portfolio: " + "<br/><br/>" +
-        "Name: " + name + "<br/>" + "Reply To: " + email + "<br/><br/>" + "Message: " + message;
-
-        Email.send({
-            SecureToken: "a9f659cd-0392-4809-9b06-95acd6d1b6ac",
-            To: 'sp29pate@uwaterloo.ca',
-            From: 'sp29pate@uwaterloo.ca',
-            ReplyTo: email,
-            Subject: subject,
-            Body: body
+        emailjs.send("service_mzfvl9a", "template_xo9rc2l", {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
         })
             .then(function (response) {
-                if (response !== 'OK') {
-                    throw new Error(response);
-                }
                 alert("Mail has been sent successfully")
                 document.getElementById("contact-form").reset();
             })
