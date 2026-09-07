@@ -225,12 +225,12 @@ const selectedIcon = localStorage.getItem('selected-icon')
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
+// We validate if the user previously chose a topic; otherwise default to dark
+const activeTheme = selectedTheme ? selectedTheme : 'dark'
+const activeIcon = selectedIcon ? selectedIcon : 'uil-sun'
+
+document.body.classList[activeTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+themeButton.classList[activeIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
@@ -292,19 +292,29 @@ function sendEmail() {
     
     if (name && email && subject && message) {
 
-        var body = "Form Submission from Portfolio: " + "<br/><br/>" + 
+        var body = "Form Submission from Portfolio: " + "<br/><br/>" +
         "Name: " + name + "<br/>" + "Reply To: " + email + "<br/><br/>" + "Message: " + message;
-    
+
         Email.send({
             SecureToken: "a9f659cd-0392-4809-9b06-95acd6d1b6ac",
             To: 'sp29pate@uwaterloo.ca',
             From: 'sp29pate@uwaterloo.ca',
+            ReplyTo: email,
             Subject: subject,
             Body: body
         })
-            .then(function (message) {
+            .then(function (response) {
+                if (response !== 'OK') {
+                    throw new Error(response);
+                }
                 alert("Mail has been sent successfully")
                 document.getElementById("contact-form").reset();
+            })
+            .catch(function (error) {
+                console.error('Email send failed:', error);
+                alert("Sorry, something went wrong sending your message. Please try again or email me directly.");
             });
+    } else {
+        alert("Please fill in all fields before sending.");
     }
 }
